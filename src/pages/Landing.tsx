@@ -78,37 +78,36 @@ export function Landing() {
         <section className="relative">
           <div className="mx-auto max-w-6xl px-5 py-10 sm:py-16">
             <Reveal>
-              <div className="grid overflow-hidden rounded-[2rem] border border-border bg-card shadow-glow md:grid-cols-2">
-                <div className="flex flex-col justify-center px-8 py-12 sm:px-12 sm:py-16">
-                  <span className="inline-block w-fit rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">
-                    台北出發 · 東京 / 首爾
-                  </span>
-                  <h1 className="mt-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-                    Flight Price Notifier
-                  </h1>
-                  <p className="mt-6 text-xl font-medium text-foreground sm:text-2xl">
-                    設定航線與目標價，機票降價就通知你
-                  </p>
-                  <p className="mt-3 text-base text-muted-foreground">
-                    Set a route and a target price — we email you when the fare drops.
-                  </p>
-                  <div className="mt-10">
-                    <Link
-                      to="/auth"
-                      className="inline-block rounded-full bg-primary px-7 py-3 text-base font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-[1.03]"
-                    >
-                      Sign in / 登入
-                    </Link>
+              <div className="relative overflow-hidden rounded-[2rem] border border-border shadow-glow">
+                <img
+                  src={heroImage}
+                  alt="飛機穿越藍天白雲"
+                  className="absolute inset-0 h-full w-full object-cover"
+                  loading="eager"
+                />
+                <div className="relative flex min-h-[420px] items-center sm:min-h-[520px]">
+                  <div className="m-6 max-w-md rounded-3xl bg-white/50 p-8 backdrop-blur-sm sm:m-10 sm:p-12">
+                    <span className="inline-block w-fit rounded-full border border-border/60 bg-white/60 px-3 py-1 text-xs text-muted-foreground">
+                      台北出發 · 東京 / 首爾
+                    </span>
+                    <h1 className="mt-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+                      Flight Price Notifier
+                    </h1>
+                    <p className="mt-6 text-xl font-medium text-foreground sm:text-2xl">
+                      設定航線與目標價，機票降價就通知你
+                    </p>
+                    <p className="mt-3 text-base text-muted-foreground">
+                      Set a route and a target price — we email you when the fare drops.
+                    </p>
+                    <div className="mt-10">
+                      <Link
+                        to="/auth"
+                        className="inline-block rounded-full bg-primary px-7 py-3 text-base font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-[1.03]"
+                      >
+                        Sign in / 登入
+                      </Link>
+                    </div>
                   </div>
-                </div>
-
-                <div className="relative min-h-[280px] md:min-h-[480px]">
-                  <img
-                    src={heroImage}
-                    alt="飛機穿越藍天白雲"
-                    className="absolute inset-0 h-full w-full object-cover"
-                    loading="eager"
-                  />
                 </div>
               </div>
             </Reveal>
