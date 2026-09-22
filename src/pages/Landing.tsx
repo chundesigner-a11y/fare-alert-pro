@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { Plane, BellRing, CalendarX } from "lucide-react";
+import heroImage from "../assets/hero-flight.jpg";
 
 function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -74,41 +75,41 @@ export function Landing() {
       </header>
 
       <main>
-        <section className="relative overflow-hidden">
-          <div className="pointer-events-none absolute inset-0 bg-hero-glow" />
-          <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 sm:py-28 md:grid-cols-2 md:gap-10">
+        <section className="relative">
+          <div className="mx-auto max-w-6xl px-5 py-10 sm:py-16">
             <Reveal>
-              <span className="inline-block rounded-full border border-border bg-card px-3 py-1 text-xs text-muted-foreground">
-                台北出發 · 東京 / 首爾
-              </span>
-              <h1 className="mt-6 text-4xl font-bold tracking-tight sm:text-6xl">
-                Flight Price Notifier
-              </h1>
-              <p className="mt-6 text-xl font-medium text-foreground sm:text-2xl">
-                設定航線與目標價，機票降價就通知你
-              </p>
-              <p className="mt-3 text-base text-muted-foreground">
-                Set a route and a target price — we email you when the fare drops.
-              </p>
-              <div className="mt-10">
-                <Link
-                  to="/auth"
-                  className="inline-block rounded-full bg-primary px-7 py-3 text-base font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-[1.03]"
-                >
-                  Sign in / 登入
-                </Link>
-              </div>
-            </Reveal>
+              <div className="grid overflow-hidden rounded-[2rem] border border-border bg-card shadow-glow md:grid-cols-2">
+                <div className="flex flex-col justify-center px-8 py-12 sm:px-12 sm:py-16">
+                  <span className="inline-block w-fit rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">
+                    台北出發 · 東京 / 首爾
+                  </span>
+                  <h1 className="mt-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+                    Flight Price Notifier
+                  </h1>
+                  <p className="mt-6 text-xl font-medium text-foreground sm:text-2xl">
+                    設定航線與目標價，機票降價就通知你
+                  </p>
+                  <p className="mt-3 text-base text-muted-foreground">
+                    Set a route and a target price — we email you when the fare drops.
+                  </p>
+                  <div className="mt-10">
+                    <Link
+                      to="/auth"
+                      className="inline-block rounded-full bg-primary px-7 py-3 text-base font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-[1.03]"
+                    >
+                      Sign in / 登入
+                    </Link>
+                  </div>
+                </div>
 
-            <Reveal delay={150}>
-              <div className="relative mx-auto aspect-[4/3] w-full max-w-md overflow-hidden rounded-3xl shadow-glow md:max-w-none">
-                <img
-                  src="https://images.unsplash.com/photo-1761371717814-2b4076020730?q=80&w=1600&auto=format&fit=crop"
-                  alt="飛機穿越雲層"
-                  className="h-full w-full object-cover"
-                  loading="eager"
-                />
-                <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-border/50" />
+                <div className="relative min-h-[280px] md:min-h-[480px]">
+                  <img
+                    src={heroImage}
+                    alt="飛機穿越藍天白雲"
+                    className="absolute inset-0 h-full w-full object-cover"
+                    loading="eager"
+                  />
+                </div>
               </div>
             </Reveal>
           </div>
