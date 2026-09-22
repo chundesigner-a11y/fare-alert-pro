@@ -76,9 +76,9 @@ export function Landing() {
       <main>
         <section className="relative overflow-hidden">
           <div className="pointer-events-none absolute inset-0 bg-hero-glow" />
-          <div className="relative mx-auto max-w-4xl px-5 py-24 text-center sm:py-32">
+          <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 sm:py-28 md:grid-cols-2 md:gap-10">
             <Reveal>
-              <span className="inline-block rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">
+              <span className="inline-block rounded-full border border-border bg-card px-3 py-1 text-xs text-muted-foreground">
                 台北出發 · 東京 / 首爾
               </span>
               <h1 className="mt-6 text-4xl font-bold tracking-tight sm:text-6xl">
@@ -97,6 +97,18 @@ export function Landing() {
                 >
                   Sign in / 登入
                 </Link>
+              </div>
+            </Reveal>
+
+            <Reveal delay={150}>
+              <div className="relative mx-auto aspect-[4/3] w-full max-w-md overflow-hidden rounded-3xl shadow-glow md:max-w-none">
+                <img
+                  src="https://images.unsplash.com/photo-1761371717814-2b4076020730?q=80&w=1600&auto=format&fit=crop"
+                  alt="飛機穿越雲層"
+                  className="h-full w-full object-cover"
+                  loading="eager"
+                />
+                <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-border/50" />
               </div>
             </Reveal>
           </div>
