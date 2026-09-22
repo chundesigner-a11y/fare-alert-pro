@@ -79,7 +79,7 @@ export function Landing() {
           <img
             src={heroImage}
             alt="飛機穿越藍天白雲"
-            className="absolute inset-0 h-full w-full object-cover object-[55%_0%]"
+            className="absolute inset-0 h-full w-full object-cover object-center"
             loading="eager"
           />
 
