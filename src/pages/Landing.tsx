@@ -1,27 +1,6 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { Plane, BellRing, CalendarX } from "lucide-react";
-
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Flight Price Notifier — 機票降價通知" },
-      {
-        name: "description",
-        content:
-          "設定航線與目標價，機票降價就通知你。We watch popular routes from Taipei and email you when the fare drops below your target price.",
-      },
-      { property: "og:title", content: "Flight Price Notifier — 機票降價通知" },
-      {
-        property: "og:description",
-        content: "Set a route and a target price — we email you when the fare drops.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
-  component: Landing,
-});
 
 function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -36,7 +15,6 @@ function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
           setShown(true);
           io.disconnect();
         }
-
       },
       { threshold: 0.15 },
     );
@@ -78,7 +56,7 @@ const features = [
   },
 ];
 
-function Landing() {
+export function Landing() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-20 border-b border-border/60 bg-background/80 backdrop-blur">
@@ -131,8 +109,7 @@ function Landing() {
                 <article className="h-full rounded-2xl border border-border bg-card p-7 transition-colors hover:border-primary/50">
                   <f.icon className="h-6 w-6 text-primary" aria-hidden />
                   <h2 className="mt-5 text-lg font-semibold">
-                    {f.zh}{" "}
-                    <span className="text-muted-foreground">({f.en})</span>
+                    {f.zh} <span className="text-muted-foreground">({f.en})</span>
                   </h2>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{f.body}</p>
                 </article>
