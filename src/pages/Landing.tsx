@@ -83,23 +83,23 @@ export function Landing() {
             loading="eager"
           />
 
-          <div className="relative flex min-h-[320px] flex-col justify-end px-5 pb-8 pt-20 sm:min-h-[380px] sm:pb-10">
+          <div className="relative flex min-h-[180px] flex-col justify-end px-5 pb-4 pt-16 sm:min-h-[220px] sm:pb-6">
             <div className="mx-auto w-full max-w-6xl">
               <Reveal>
-                <div className="max-w-sm rounded-3xl bg-white/50 p-6 backdrop-blur-sm sm:max-w-md sm:p-8">
+                <div className="max-w-sm rounded-3xl bg-white/50 p-5 backdrop-blur-sm sm:max-w-md sm:p-6">
                   <span className="inline-block w-fit rounded-full border border-border/60 bg-white/60 px-3 py-1 text-xs text-muted-foreground">
                     台北出發 · 東京 / 首爾
                   </span>
-                  <h1 className="mt-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+                  <h1 className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
                     Flight Price Notifier
                   </h1>
-                  <p className="mt-6 text-xl font-medium text-foreground sm:text-2xl">
+                  <p className="mt-4 text-lg font-medium text-foreground sm:text-xl">
                     設定航線與目標價，機票降價就通知你
                   </p>
                   <p className="mt-3 text-base text-muted-foreground">
                     Set a route and a target price — we email you when the fare drops.
                   </p>
-                  <div className="mt-10">
+                  <div className="mt-5">
                     <Link
                       to="/auth"
                       className="inline-block rounded-full bg-primary px-7 py-3 text-base font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-[1.03]"
@@ -112,17 +112,17 @@ export function Landing() {
             </div>
           </div>
 
-          <div className="relative px-5 pb-16 pt-6">
+          <div className="relative px-5 pb-8 pt-3">
             <div className="mx-auto max-w-6xl">
-              <div className="grid gap-6 md:grid-cols-3">
+              <div className="grid gap-3 md:grid-cols-3">
                 {features.map((f, i) => (
                   <Reveal key={f.en} delay={i * 120}>
-                    <article className="h-full rounded-2xl border border-white/60 bg-white/50 p-7 backdrop-blur-sm transition-colors hover:border-primary/50">
-                      <f.icon className="h-6 w-6 text-primary" aria-hidden />
-                      <h2 className="mt-5 text-lg font-semibold text-foreground">
+                    <article className="h-full rounded-2xl border border-white/60 bg-white/50 p-4 backdrop-blur-sm transition-colors hover:border-primary/50">
+                      <f.icon className="h-5 w-5 text-primary" aria-hidden />
+                      <h2 className="mt-2 text-base font-semibold text-foreground">
                         {f.zh} <span className="text-muted-foreground">({f.en})</span>
                       </h2>
-                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{f.body}</p>
+                      <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{f.body}</p>
                     </article>
                   </Reveal>
                 ))}
