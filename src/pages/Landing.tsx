@@ -79,7 +79,7 @@ export function Landing() {
           <img
             src={heroImage}
             alt="飛機穿越藍天白雲"
-            className="absolute inset-0 h-full w-full object-cover object-[55%_10%]"
+            className="absolute inset-0 h-full w-full object-cover object-[55%_0%]"
             loading="eager"
           />
 
@@ -112,7 +112,7 @@ export function Landing() {
             </div>
           </div>
 
-          <div className="relative px-5 pb-8 pt-3">
+          <div className="relative px-5 pb-8 pt-8">
             <div className="mx-auto max-w-6xl">
               <div className="grid gap-3 md:grid-cols-3">
                 {features.map((f, i) => (
