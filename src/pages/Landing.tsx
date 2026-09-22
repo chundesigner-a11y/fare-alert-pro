@@ -75,58 +75,59 @@ export function Landing() {
       </header>
 
       <main>
-        <section className="relative">
-          <div className="mx-auto max-w-6xl px-5 py-4 sm:py-6">
-            <Reveal>
-              <div className="relative overflow-hidden rounded-[2rem] border border-border shadow-glow">
-                <img
-                  src={heroImage}
-                  alt="飛機穿越藍天白雲"
-                  className="absolute inset-0 h-full w-full object-cover object-[75%_25%]"
-                  loading="eager"
-                />
-                <div className="relative flex min-h-[300px] items-end sm:min-h-[360px]">
-                  <div className="m-6 max-w-sm rounded-3xl bg-white/50 p-6 backdrop-blur-sm sm:m-8 sm:max-w-md sm:p-8">
-                    <span className="inline-block w-fit rounded-full border border-border/60 bg-white/60 px-3 py-1 text-xs text-muted-foreground">
-                      台北出發 · 東京 / 首爾
-                    </span>
-                    <h1 className="mt-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-                      Flight Price Notifier
-                    </h1>
-                    <p className="mt-6 text-xl font-medium text-foreground sm:text-2xl">
-                      設定航線與目標價，機票降價就通知你
-                    </p>
-                    <p className="mt-3 text-base text-muted-foreground">
-                      Set a route and a target price — we email you when the fare drops.
-                    </p>
-                    <div className="mt-10">
-                      <Link
-                        to="/auth"
-                        className="inline-block rounded-full bg-primary px-7 py-3 text-base font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-[1.03]"
-                      >
-                        Sign in / 登入
-                      </Link>
-                    </div>
+        <section className="relative overflow-hidden">
+          <img
+            src={heroImage}
+            alt="飛機穿越藍天白雲"
+            className="absolute inset-0 h-full w-full object-cover object-[70%_20%]"
+            loading="eager"
+          />
+
+          <div className="relative flex min-h-[320px] flex-col justify-end px-5 pb-8 pt-20 sm:min-h-[380px] sm:pb-10">
+            <div className="mx-auto w-full max-w-6xl">
+              <Reveal>
+                <div className="max-w-sm rounded-3xl bg-white/50 p-6 backdrop-blur-sm sm:max-w-md sm:p-8">
+                  <span className="inline-block w-fit rounded-full border border-border/60 bg-white/60 px-3 py-1 text-xs text-muted-foreground">
+                    台北出發 · 東京 / 首爾
+                  </span>
+                  <h1 className="mt-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+                    Flight Price Notifier
+                  </h1>
+                  <p className="mt-6 text-xl font-medium text-foreground sm:text-2xl">
+                    設定航線與目標價，機票降價就通知你
+                  </p>
+                  <p className="mt-3 text-base text-muted-foreground">
+                    Set a route and a target price — we email you when the fare drops.
+                  </p>
+                  <div className="mt-10">
+                    <Link
+                      to="/auth"
+                      className="inline-block rounded-full bg-primary px-7 py-3 text-base font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-[1.03]"
+                    >
+                      Sign in / 登入
+                    </Link>
                   </div>
                 </div>
-              </div>
-            </Reveal>
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-6xl px-5 pb-16">
-          <div className="grid gap-6 md:grid-cols-3">
-            {features.map((f, i) => (
-              <Reveal key={f.en} delay={i * 120}>
-                <article className="h-full rounded-2xl border border-border bg-card p-7 transition-colors hover:border-primary/50">
-                  <f.icon className="h-6 w-6 text-primary" aria-hidden />
-                  <h2 className="mt-5 text-lg font-semibold">
-                    {f.zh} <span className="text-muted-foreground">({f.en})</span>
-                  </h2>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{f.body}</p>
-                </article>
               </Reveal>
-            ))}
+            </div>
+          </div>
+
+          <div className="relative px-5 pb-16 pt-6">
+            <div className="mx-auto max-w-6xl">
+              <div className="grid gap-6 md:grid-cols-3">
+                {features.map((f, i) => (
+                  <Reveal key={f.en} delay={i * 120}>
+                    <article className="h-full rounded-2xl border border-white/60 bg-white/50 p-7 backdrop-blur-sm transition-colors hover:border-primary/50">
+                      <f.icon className="h-6 w-6 text-primary" aria-hidden />
+                      <h2 className="mt-5 text-lg font-semibold text-foreground">
+                        {f.zh} <span className="text-muted-foreground">({f.en})</span>
+                      </h2>
+                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{f.body}</p>
+                    </article>
+                  </Reveal>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
       </main>
