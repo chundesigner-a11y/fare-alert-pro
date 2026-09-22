@@ -76,17 +76,17 @@ export function Landing() {
 
       <main>
         <section className="relative">
-          <div className="mx-auto max-w-6xl px-5 py-10 sm:py-16">
+          <div className="mx-auto max-w-6xl px-5 py-4 sm:py-6">
             <Reveal>
               <div className="relative overflow-hidden rounded-[2rem] border border-border shadow-glow">
                 <img
                   src={heroImage}
                   alt="飛機穿越藍天白雲"
-                  className="absolute inset-0 h-full w-full object-cover"
+                  className="absolute inset-0 h-full w-full object-cover object-[75%_25%]"
                   loading="eager"
                 />
-                <div className="relative flex min-h-[420px] items-center sm:min-h-[520px]">
-                  <div className="m-6 max-w-md rounded-3xl bg-white/50 p-8 backdrop-blur-sm sm:m-10 sm:p-12">
+                <div className="relative flex min-h-[300px] items-end sm:min-h-[360px]">
+                  <div className="m-6 max-w-sm rounded-3xl bg-white/50 p-6 backdrop-blur-sm sm:m-8 sm:max-w-md sm:p-8">
                     <span className="inline-block w-fit rounded-full border border-border/60 bg-white/60 px-3 py-1 text-xs text-muted-foreground">
                       台北出發 · 東京 / 首爾
                     </span>
@@ -114,7 +114,7 @@ export function Landing() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-6xl px-5 pb-28">
+        <section className="mx-auto max-w-6xl px-5 pb-16">
           <div className="grid gap-6 md:grid-cols-3">
             {features.map((f, i) => (
               <Reveal key={f.en} delay={i * 120}>
