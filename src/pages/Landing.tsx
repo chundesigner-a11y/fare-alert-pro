@@ -83,7 +83,7 @@ export function Landing() {
             loading="eager"
           />
 
-          <div className="relative flex min-h-[180px] flex-col justify-end px-5 pb-4 pt-16 sm:min-h-[220px] sm:pb-6">
+          <div className="relative flex min-h-[300px] flex-col justify-end px-5 pb-4 pt-16 sm:min-h-[340px] sm:pb-6">
             <div className="mx-auto w-full max-w-6xl">
               <Reveal>
                 <div className="max-w-sm rounded-3xl bg-white/50 p-5 backdrop-blur-sm sm:max-w-md sm:p-6">
@@ -112,7 +112,7 @@ export function Landing() {
             </div>
           </div>
 
-          <div className="relative px-5 pb-8 pt-8">
+          <div className="relative px-5 pb-8 pt-4">
             <div className="mx-auto max-w-6xl">
               <div className="grid gap-3 md:grid-cols-3">
                 {features.map((f, i) => (
